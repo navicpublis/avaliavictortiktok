@@ -1,0 +1,117 @@
+/* ==========================================
+   SISTEMA DE ANIMAÇÕES ULTRA-FLUIDAS (MOBILE OPTIMIZED)
+   ========================================== */
+
+/* Bounce Animation with hardware acceleration */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateZ(0);
+  }
+  40% {
+    transform: translateY(-16px) translateZ(0);
+  }
+  60% {
+    transform: translateY(-8px) translateZ(0);
+  }
+}
+
+/* Snappy Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Premium Springy Zoom In (iOS style) */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.92) translateZ(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateZ(0);
+    opacity: 1;
+  }
+}
+
+/* Subtle Fluid Pulse for Call-to-Actions */
+@keyframes pulse {
+  0% {
+    transform: scale(1) translateZ(0);
+    box-shadow: 0 0 0 0 rgba(254, 44, 85, 0.4);
+  }
+  70% {
+    transform: scale(1.02) translateZ(0);
+    box-shadow: 0 0 0 10px rgba(254, 44, 85, 0);
+  }
+  100% {
+    transform: scale(1) translateZ(0);
+    box-shadow: 0 0 0 0 rgba(254, 44, 85, 0);
+  }
+}
+
+/* Smooth Slide-In for Questions */
+@keyframes slideInRight {
+  from {
+    transform: translateX(20px) translateZ(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) translateZ(0);
+    opacity: 1;
+  }
+}
+
+/* Spin animation for mobile loading screen */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Classes triggers with optimized properties and hardware rendering acceleration */
+.bounce {
+  animation: bounce 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  will-change: opacity;
+}
+
+.zoom-in {
+  animation: zoomIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  will-change: transform, opacity;
+}
+
+.pulse {
+  animation: pulse 2s infinite cubic-bezier(0.25, 0, 0, 1);
+  will-change: transform;
+}
+
+.slide-in {
+  animation: slideInRight 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  will-change: transform, opacity;
+}
+
+.spin {
+  animation: spin 0.8s linear infinite;
+}
+
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #f00;
+  border-radius: 50%;
+  opacity: 0;
+  will-change: transform, opacity;
+  pointer-events: none;
+}

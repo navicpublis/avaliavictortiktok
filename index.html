@@ -1,243 +1,223 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>TikTok — Conclua nossa pesquisa e ganhe até R$850</title>
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <script src="../../cdn.utmify.com.br/scripts/utms/latest_v%3D999993.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Utmify -->
-  <script
-    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-    data-utmify-prevent-xcod-sck
-    data-utmify-prevent-subids
-    async defer
-  ></script>
-
-  <!-- config.js para EXIT_URL -->
-  <script src="js/config.js"></script>
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <title>TikTok Recompensas</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path fill='%23000000' d='M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z'/></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #fff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    :root {
+      --tt-red: #FE2C55;
+      --tt-red-2: #FF0050;
+      --ink: #111111;
+      --muted: #8a94a6;
+      --field-border: #e4e8ef;
     }
 
-    /* ── HEADER ── */
-    .site-header {
-      width: 100%;
-      border-bottom: 1px solid #e8e8e8;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      background: #ffffff;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--ink);
+      min-height: 100%;
+    }
+
+    .page {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 0 16px 60px;
+    }
+
+    /* Top brand bar */
+    .topbar {
       display: flex;
+      align-items: center;
       justify-content: center;
-      align-items: center;
-      padding: 14px 20px;
-      gap: 10px;
+      gap: 9px;
+      padding: 22px 0 20px;
+      border-bottom: 1px solid #eef1f5;
     }
 
-    .site-header .tiktok-icon {
-      width: 32px;
-      height: 32px;
-    }
+    .topbar svg { display: block; }
 
-    .site-header .brand-name {
-      font-size: 22px;
+    .topbar .wordmark {
+      font-size: 24px;
       font-weight: 700;
-      color: #111;
-      letter-spacing: -0.3px;
+      letter-spacing: -0.5px;
+      color: var(--ink);
     }
 
-    /* ── MAIN ── */
-    .main-content {
-      width: 100%;
-      max-width: 480px;
-      padding: 40px 20px 32px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
+    /* Promo card */
+    .promo {
+      margin: 40px auto 0;
+      max-width: 340px;
+      background: linear-gradient(150deg, #C13BF0 0%, #9B2FE0 55%, #8A1FD6 100%);
+      border-radius: 22px;
+      padding: 22px 20px 24px;
+      box-shadow: 0 24px 60px rgba(139, 31, 214, 0.28);
     }
 
-    /* ── CARD ROXO ── */
-    .promo-card {
-      width: 100%;
-      background: linear-gradient(145deg, #9b40d8 0%, #7c2cbf 60%, #6a1fa8 100%);
-      border-radius: 20px;
-      padding: 24px 20px 28px;
-      color: #fff;
-    }
-
-    .promo-date {
+    .promo .pill {
       display: inline-block;
-      background: rgba(255,255,255,0.22);
-      border-radius: 999px;
-      padding: 4px 14px;
+      background: rgba(255, 255, 255, 0.18);
+      color: #ffffff;
       font-size: 12px;
       font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 999px;
       margin-bottom: 16px;
     }
 
-    .promo-title {
-      font-size: 28px;
-      font-weight: 800;
-      line-height: 1.25;
-      margin-bottom: 24px;
+    .promo h1 {
+      color: #ffffff;
+      font-size: 29px;
+      line-height: 1.18;
+      font-weight: 700;
+      margin-bottom: 20px;
     }
 
-    .promo-title .highlight {
-      color: #ffc107;
-    }
+    .promo h1 .amount { color: #FFE24B; }
 
-    /* ── FORM DENTRO DO CARD ── */
-    .email-form {
-      background: #fff;
+    /* White capture box */
+    .capture {
+      background: #ffffff;
       border-radius: 12px;
-      padding: 18px 16px 20px;
+      padding: 18px 16px 16px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
     }
 
-    .email-form label {
-      display: block;
-      font-size: 14px;
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 10px;
-    }
-
-    .email-form input[type="email"] {
-      width: 100%;
-      padding: 13px 14px;
-      border: 1.5px solid #ddd;
-      border-radius: 8px;
-      font-size: 14px;
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-      outline: none;
-      margin-bottom: 12px;
-      transition: border-color 0.2s;
-    }
-
-    .email-form input[type="email"]:focus {
-      border-color: #fe2c55;
-    }
-
-    .email-form input[type="email"]::placeholder {
-      color: #bbb;
-    }
-
-    .access-btn {
-      display: block;
-      width: 100%;
-      background: #fe2c55;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 14px;
+    .capture .label {
       font-size: 15px;
-      font-weight: 700;
-      cursor: pointer;
-      font-family: 'Poppins', sans-serif;
-      transition: background 0.2s, transform 0.1s;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 12px;
     }
 
-    .access-btn:hover  { background: #e0244a; }
-    .access-btn:active { transform: scale(0.98); }
-
-    /* ── FOOTER TERMS ── */
-    .terms-footer {
-      font-size: 12px;
-      color: #999;
-      text-align: center;
-      line-height: 1.6;
-      padding: 0 10px;
-    }
-
-    .terms-footer a { color: #777; }
-
-    /* ── DIVIDER ── */
-    .footer-divider {
+    .capture input {
       width: 100%;
-      max-width: 480px;
+      font-family: inherit;
+      font-size: 15px;
+      color: var(--ink);
+      padding: 14px 14px;
+      border: 1px solid var(--field-border);
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .capture input::placeholder { color: #9aa3b2; }
+
+    .capture input:focus {
+      border-color: var(--tt-red);
+      box-shadow: 0 0 0 3px rgba(254, 44, 85, 0.12);
+    }
+
+    .capture .error {
+      display: none;
+      color: var(--tt-red);
+      font-size: 12.5px;
+      font-weight: 500;
+      margin-top: 7px;
+    }
+
+    .capture.invalid .error { display: block; }
+    .capture.invalid input { border-color: var(--tt-red); }
+
+    .capture button {
+      width: 100%;
+      margin-top: 12px;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--tt-red), var(--tt-red-2));
       border: none;
-      border-top: 1px solid #eee;
-      margin: 0;
+      border-radius: 8px;
+      padding: 15px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(254, 44, 85, 0.3);
+      transition: transform 0.12s, opacity 0.15s;
+    }
+
+    .capture button:hover { opacity: 0.96; }
+    .capture button:active { transform: translateY(1px); }
+
+    /* Footer terms */
+    .terms {
+      max-width: 340px;
+      margin: 34px auto 0;
+      padding-top: 26px;
+      border-top: 1px solid #eef1f5;
+      text-align: center;
+      font-size: 12.5px;
+      font-weight: 600;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .terms a { color: var(--muted); text-decoration: underline; }
+
+    @media (max-width: 380px) {
+      .promo h1 { font-size: 26px; }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- HEADER -->
-  <header class="site-header">
-    <!-- Ícone TikTok -->
-    <svg class="tiktok-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z" fill="#111"/>
-    </svg>
-    <span class="brand-name">TikTok</span>
-  </header>
-
-  <!-- MAIN -->
-  <main class="main-content">
-
-    <!-- Card roxo -->
-    <div class="promo-card">
-      <span class="promo-date">01 de jan - 01 de dez</span>
-      <h1 class="promo-title">
-        Conclua nossa pesquisa e ganhe até <span class="highlight">R$850</span> em recompensas
-      </h1>
-
-      <!-- Formulário -->
-      <div class="email-form">
-        <label for="user-email">Insira o seu e-mail para acessar</label>
-        <input
-          type="email"
-          id="user-email"
-          placeholder="Digite o seu e-mail"
-          autocomplete="email"
-        >
-        <button class="access-btn" id="access-btn">Acessar</button>
-      </div>
+  <div class="page">
+    <!-- Brand bar -->
+    <div class="topbar">
+      <svg width="30" height="30" viewBox="0 0 448 512" aria-hidden="true">
+        <path fill="#FE2C55" d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z" opacity="0.9"></path>
+        <path fill="#111111" d="M420 181.91a210.06 210.06 0 0 1-122.77-39.25V321.38A162.55 162.55 0 1 1 157 160.31v89.89a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 353 74.39a121.43 121.43 0 0 0 67 20.14Z" transform="translate(-16 14) scale(0.94)"></path>
+      </svg>
+      <span class="wordmark">TikTok</span>
     </div>
 
-    <hr class="footer-divider">
+    <!-- Promo card -->
+    <div class="promo">
+      <span class="pill">01 de jan - 01 de dez</span>
+      <h1>Conclua nossa pesquisa e ganhe até <span class="amount">R$597</span> em recompensas</h1>
 
-    <!-- Termos -->
-    <p class="terms-footer">
-      Ao participar das atividades de recompensa, você<br>
-      concorda com nossos <a href="#">Termos e Condições</a>.
+      <form id="capture" class="capture" novalidate="">
+        <div class="label">Insira o seu e-mail para acessar</div>
+        <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="Digite o seu e-mail" aria-label="E-mail">
+        <div class="error">Digite um e-mail válido para continuar.</div>
+        <button type="submit">Acessar</button>
+      </form>
+    </div>
+
+    <!-- Terms -->
+    <p class="terms">
+      Ao participar das atividades de recompensa, você concorda com nossos <a href="#">Termos e Condições</a>.
     </p>
-
-  </main>
+  </div>
 
   <script>
-    // Exit intent
     (function () {
-      history.pushState({}, '', location.href);
-      history.pushState({}, '', location.href);
-      history.pushState({}, '', location.href);
-      window.addEventListener('popstate', function () {
-        setTimeout(function () {
-          window.location.replace(CONFIG.EXIT_URL);
-        }, 1);
+      var form = document.getElementById('capture');
+      var input = document.getElementById('email');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var email = input.value.trim();
+
+        // Guarda o que foi digitado para uso no quiz / checkout
+        try { localStorage.setItem('user_email', email); } catch (err) {}
+
+        // Redireciona para o quiz, preservando os parâmetros de rastreamento (UTMs)
+        var dest = 'quiz/index.html';
+        var qs = window.location.search.replace('?', '');
+        if (qs) { dest += '?' + qs; }
+        window.location.href = dest;
       });
     })();
-
-    // Botão Acessar → vai para o quiz (index.html) preservando UTMs
-    document.getElementById('access-btn').addEventListener('click', function () {
-      var email = document.getElementById('user-email').value.trim();
-      var qs    = window.location.search || '';
-      var dest  = 'quiz.html' + (qs || '');
-      window.location.href = dest;
-    });
   </script>
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"eec7905c33fa48f29199674d4be7c643","r":1,"spa":2}' crossorigin="anonymous"></script>
-</body>
-</html>
+
+
+</body></html>
